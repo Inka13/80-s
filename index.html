@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+  
+    
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    
+    <title>React App</title>
+    <style>
+      body {
+        background-image: url('D:/My Downloads/80.png');
+        background-size: 100%;
+        font-family: 'Anton', sans-serif;
+
+      }
+      #question {
+        
+        margin: auto;
+        text-align: center;
+        margin-top: 200px;
+        font-size: 50px;
+        color: white;
+      }
+      #options {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 50px;
+        font-size: 30px;
+        color: white;
+      }
+      #no {
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <div id="question">Was it acceptable in the 80's?</div>
+    <div id="options">
+      <div id="yes">YES</div>
+      <div id="no">NO</div>
+      <audio src="C:\wamp64\www\80\calvin.m4r">
+    </div>
+    <script>
+      function play() {
+         const audio = document.querySelector('audio');
+        if (!audio)  return; 
+      // stop the function from running all together
+      
+      audio.currentTime = 0; // rewind to the start
+      audio.play();
+      }
+     function stop() {
+         const audio = document.querySelector('audio');
+         audio.pause();
+        if (!audio)  return; 
+      // stop the function from running all together
+      
+      audio.currentTime = 0; // rewind to the start
+      
+      }
+      const yes = document.querySelector('#yes');
+      yes.addEventListener('click',play);
+      const no = document.querySelector('#no');
+      no.addEventListener('click',stop);
+    </script>
+  </body>
+</html>
